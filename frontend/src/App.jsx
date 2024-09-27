@@ -15,79 +15,69 @@ function App() {
     <div className='main-categories'>
        <div className="cat-1">
         <h5 className='text-center my-4'>Category 1</h5>
-          <Swiper
-          spaceBetween={50}
-          slidesPerView={4}
-          autoplay={{
-            delay: 1000,
-            disableOnInteraction: false,
-          }}
-        >
-          <SwiperSlide>
-            <div className="country-img">
-              <img src={logo} alt="" />
+          <div className="row">
+            <div className="col-4">
+               <div className="country-img">
+                  <img src={logo} alt="" />
+                  <p className="text-center">Indian</p>
+              </div>
             </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="country-img">
-              <img src={logo} alt="" />
+            <div className="col-4">
+               <div className="country-img">
+                  <img src={logo} alt="" />
+                  <p className="text-center">Indian</p>
+              </div>
             </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="country-img">
-              <img src={logo} alt="" />
+            <div className="col-4">
+               <div className="country-img">
+                  <img src={logo} alt="" />
+                  <p className="text-center">Indian</p>
+              </div>
             </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="country-img">
-              <img src={logo} alt="" />
+          </div>
+          <div className="row my-3">
+            <div className="col-4">
+               <div className="country-img">
+                  <img src={logo} alt="" />
+                  <p className="text-center">Indian</p>
+              </div>
             </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="country-img">
-              <img src={logo} alt="" />
+            <div className="col-4">
+               <div className="country-img">
+                  <img src={logo} alt="" />
+                  <p className="text-center">Indian</p>
+              </div>
             </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="country-img">
-              <img src={logo} alt="" />
+            <div className="col-4">
+               <div className="country-img">
+                  <img src={logo} alt="" />
+                  <p className="text-center">Indian</p>
+              </div>
             </div>
-          </SwiperSlide>
-
-        </Swiper>
+          </div>
         </div> 
         <div className="cat-2">
         <h5 className='text-center my-4'>Category 2</h5>
-          <Swiper
-          spaceBetween={50}
-          slidesPerView={2}
-          autoplay={{
-            delay: 1000,
-            disableOnInteraction: false,
-          }}
-        >
-          <SwiperSlide>
-            <div className="categorie-img">
-              <img src="src/assets/pasta-horizontal.jpeg" alt="" />
+          <div className="row">
+            <div className="col-6">
+              <div className='category-img'>
+                <img src="src/assets/pasta-horizontal.jpeg" alt=""/>
+                <div className="p">
+                  <p className='title'>Pizza</p>
+                  <p className='desc'>Lorem ipsum dolor sit amet.</p>
+                </div>
+              </div>
             </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="categorie-img">
-              <img src="src/assets/pasta-horizontal.jpeg" alt="" />
+            <div className="col-6">
+              <div className='category-img'>
+                <img src="src/assets/pasta-horizontal.jpeg" alt=""/>
+                <div className="p">
+                  <p className='title'>Pizza</p>
+                  <p className='desc'>Lorem ipsum dolor sit amet.</p>
+                </div>
+              </div>
             </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="categorie-img">
-              <img src="src/assets/pasta-horizontal.jpeg" alt="" />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="categorie-img">
-              <img src="src/assets/pasta-horizontal.jpeg" alt="" />
-            </div>
-          </SwiperSlide>
-
-        </Swiper>
+          </div>
         </div> 
         <div className="cat-3">
 
