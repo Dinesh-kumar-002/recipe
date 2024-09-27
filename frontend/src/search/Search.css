@@ -1,0 +1,10 @@
+.navbar-brand img{
+    width: 90px;
+}
+.navbar-brand{
+    padding: 0;
+    margin: 0;
+}
+.search-div{
+    background-color: gray;
+}

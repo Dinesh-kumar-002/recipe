@@ -1,0 +1,18 @@
+.country-img img {
+    width: 100px;
+    background: #ebebeb;
+    border-radius: 25px;
+}
+
+.cat-1,.cat-2,.cat-3,.cat-4{
+    margin: 0 25px;
+
+}
+.main-categories{
+    margin: 15px 0;
+}
+
+.categorie-img img{
+    width: 100%;
+    border-radius: 15px;
+}

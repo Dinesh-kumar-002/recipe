@@ -1,0 +1,108 @@
+.card {
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-shadow: 0px 17px 34px -20px #f5595173;
+    box-shadow: 0px 17px 34px -20px #f559517a;
+    margin: 10px 0;
+}
+  
+  .card img {
+    border-radius: 0.5em;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 250px;
+    width: 200px;
+  }
+  
+  .card__container {
+    position: relative;
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+    margin-left: 1.4em;
+  }
+  
+  .card__title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0.7em 0;
+  }
+  
+  .card__text {
+    font-size: 1rem;
+    margin-bottom: 0.8em;
+    margin-right: 5em;
+  }
+  
+  .fa-heart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.6em;
+    border: 1px solid #F1E8E6;
+    border-radius: 100%;
+  }
+  
+  .stars {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .stars__text {
+    font-size: 1rem;
+    font-weight: 700;
+    opacity: 0.5;
+    margin-left: 0.5em;
+  }
+  
+  /* Ratings */
+  .rating:not(:checked) > input {
+    display: none;
+  }
+  
+  #like:not(:checked) > label {
+    cursor: pointer;
+    float: right;
+    width: 30px;
+    height: 30px;
+    display: block;
+    color: rgba(233, 54, 40, 0.4);
+    line-height: 33px;
+    text-align: center;
+  }
+  
+  #like:not(:checked) > label:hover,
+  #like:not(:checked) > label:hover ~ label {
+    color: rgba(233, 54, 40, 0.6);
+  }
+  
+  #like > input:checked + label:hover,
+  #like > input:checked + label:hover ~ label,
+  #like > input:checked ~ label:hover,
+  #like > input:checked ~ label:hover ~ label,
+  #like > label:hover ~ input:checked ~ label {
+    color: rgba(233, 54, 40, 0.8);
+  }
+  
+  #like > input:checked ~ label {
+    color: #e93628;
+  }
