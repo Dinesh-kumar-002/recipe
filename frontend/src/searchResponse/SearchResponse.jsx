@@ -1,20 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './SearchResponse.css'
+import './SearchResponse.css';
 
-function SearchResponse() {
-  const apiKey = 'd5caadaed67943d8b0286c5823db5e7e'; 
+function SearchResponse({ searchValue }) {
+  const apiKey = 'YOUR_API_KEY'; // Make sure to replace this with your actual API key
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
   useEffect(() => {
     const fetchRecipes = async () => {
+      if (!searchValue) return; // Don't fetch if searchValue is empty
+
+      setLoading(true);
+      setError('');
+
       try {
         const response = await axios.get(`https://api.spoonacular.com/recipes/complexSearch`, {
           params: {
-            apiKey: apiKey,
-            query: 'pizza',
+            apiKey: 'd5caadaed67943d8b0286c5823db5e7e',
+            query: searchValue,
           },
         });
         setRecipes(response.data.results);
@@ -27,7 +32,7 @@ function SearchResponse() {
     };
 
     fetchRecipes();
-  }, [apiKey]);
+  }, [searchValue]); // Run effect when searchValue changes
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p style={{ color: 'red' }}>{error}</p>;

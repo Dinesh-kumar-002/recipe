@@ -13,7 +13,7 @@ function App() {
   return (
     <div className='app'>
       <SearchResponse/>
-      <Search />
+      <Search  />
     <div className='main-categories'>
        <div className="cat-1">
         <h5 className='text-center my-4'>Category 1</h5>
