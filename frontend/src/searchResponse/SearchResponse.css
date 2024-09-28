@@ -1,0 +1,20 @@
+.recipe-list{
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    left: 0;
+    z-index: 99;
+    background-color: white;
+    padding: 15px;
+}
+
+.recipe-list .items {
+    display: flex;
+    padding: 5px;
+}
+.recipe-list .items img{
+    width: 50px;
+}
+.item-title .text{
+    padding-left: 10px;
+}
