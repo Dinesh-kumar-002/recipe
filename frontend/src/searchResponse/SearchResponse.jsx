@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './searchResponse.css'
+import './SearchResponse.css'
 
 function SearchResponse() {
   const apiKey = 'd5caadaed67943d8b0286c5823db5e7e'; 
