@@ -1,16 +1,23 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './SearchResponse.css';
 
 function SearchResponse({ searchValue }) {
-  const apiKey = 'YOUR_API_KEY'; // Make sure to replace this with your actual API key
+  const navigate = useNavigate();
+  const apiKey = '11479ad6a5704e14bb46eb8c51098184'; 
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
+  const handleProductClick = (id) => {
+    navigate(`/recipe/${id}`);  
+  };
+
   useEffect(() => {
     const fetchRecipes = async () => {
-      if (!searchValue) return; // Don't fetch if searchValue is empty
+      if (!searchValue) return; 
+      
 
       setLoading(true);
       setError('');
@@ -18,7 +25,7 @@ function SearchResponse({ searchValue }) {
       try {
         const response = await axios.get(`https://api.spoonacular.com/recipes/complexSearch`, {
           params: {
-            apiKey: 'd5caadaed67943d8b0286c5823db5e7e',
+            apiKey: apiKey,
             query: searchValue,
           },
         });
@@ -32,15 +39,20 @@ function SearchResponse({ searchValue }) {
     };
 
     fetchRecipes();
-  }, [searchValue]); // Run effect when searchValue changes
+  }, [searchValue]);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p style={{ color: 'red' }}>{error}</p>;
+  // if (loading) return <p>Loading...</p>;
+  // if (error) return <p style={{ color: 'red' }}>{error}</p>;
 
   return (
-    <div className="recipe-list">
+    <div className="recipe-list" style={{ display: searchValue === '' ? 'none' : 'block' }}>
+      <div className="info" style={{ display: (loading || error ) ? 'flex' : 'none' }}>
+        {(loading)?"loading...":""}
+        {(error)?{error}:""}
+        
+      </div>
       {recipes.map((recipe, index) => (
-        <div className="items" key={index}>
+        <div className="items" key={recipe.id} onClick={() => handleProductClick(recipe.id)}>
           <img src={recipe.image} alt={recipe.title} />
           <div className="item-title">
             <p className="text">{recipe.title}</p>

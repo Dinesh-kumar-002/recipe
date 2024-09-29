@@ -1,0 +1,38 @@
+.back{
+    background: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+    padding: 20px;
+}
+
+.detail-title {
+    margin: 10px;
+    font-weight: 600;
+    
+}
+.recipeDetail-div{
+    
+    padding: 20px;
+}
+
+.tags-div{
+    display: flex;
+    flex-wrap: wrap;
+}
+.tags {
+    background-color: #ebebeb;
+    margin: 2px;
+    padding: 5px 10px;
+    text-transform: capitalize;
+}
+.likesandprice span{
+    padding: 2px ;
+    margin: 5px;
+}
+.likesandprice .like{
+    font-weight: 600;
+}
+.likesandprice .price{
+    font-weight: 600;
+}

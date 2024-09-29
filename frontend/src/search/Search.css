@@ -15,3 +15,7 @@ form button{
     border-bottom-left-radius: 0 !important;
 
 }
+[type="search"]:focus{
+   border: 0; 
+   box-shadow: none;
+}

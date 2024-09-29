@@ -5,7 +5,7 @@ import './Search.css';
 
 function Search({ searchValue, setSearchValue }) {
   const handleInputChange = (e) => {
-    setSearchValue(e.target.value); // Update the state in App
+    setSearchValue(e.target.value);
   };
 
   return (
@@ -24,9 +24,9 @@ function Search({ searchValue, setSearchValue }) {
               onChange={handleInputChange}
               value={searchValue}
             />
-            <button className="btn border-white text-light border-0" type="submit">
+            {/* <button className="btn border-white text-light border-0" type="submit">
               <FaSearch />
-            </button>
+            </button> */}
           </div>
           <button className='border-0 bg-dark text-light rounded-circle p-2 d-flex justify-content-center align-content-center'>
             <FaMoon />
