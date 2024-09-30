@@ -16,10 +16,13 @@
   
   .card img {
     border-radius: 0.5em;
-    -o-object-fit: cover;
        object-fit: cover;
-    height: 250px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
+    
+  }
+  figure{
+    margin: 0;
   }
   
   .card__container {
@@ -31,15 +34,13 @@
   }
   
   .card__title {
-    font-size: 1.6rem;
+    font-size: 20px;
     font-weight: 700;
-    margin: 0.7em 0;
+    margin-bottom: 3px;
   }
   
   .card__text {
     font-size: 1rem;
-    margin-bottom: 0.8em;
-    margin-right: 5em;
   }
   
   .fa-heart {
@@ -73,36 +74,20 @@
     opacity: 0.5;
     margin-left: 0.5em;
   }
-  
-  /* Ratings */
-  .rating:not(:checked) > input {
-    display: none;
+
+
+  .loadmore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:20px 0;
   }
-  
-  #like:not(:checked) > label {
-    cursor: pointer;
-    float: right;
-    width: 30px;
-    height: 30px;
-    display: block;
-    color: rgba(233, 54, 40, 0.4);
-    line-height: 33px;
-    text-align: center;
-  }
-  
-  #like:not(:checked) > label:hover,
-  #like:not(:checked) > label:hover ~ label {
-    color: rgba(233, 54, 40, 0.6);
-  }
-  
-  #like > input:checked + label:hover,
-  #like > input:checked + label:hover ~ label,
-  #like > input:checked ~ label:hover,
-  #like > input:checked ~ label:hover ~ label,
-  #like > label:hover ~ input:checked ~ label {
-    color: rgba(233, 54, 40, 0.8);
-  }
-  
-  #like > input:checked ~ label {
-    color: #e93628;
-  }
+
+  .loadmore button {
+    padding: 5px 16px;
+    border: 0;
+    background: #a1a1a1;
+    border-radius: 5px;
+    color: black;
+    font-weight: 600;
+}
