@@ -31,6 +31,24 @@ function App() {
           />
 
           <Route path="/recipe/:id" element={<Recipecard />} />
+          <Route path="/recipe" element={<>
+                <Search searchValue={searchValue} setSearchValue={setSearchValue} />
+                <SearchResponse searchValue={searchValue} />
+                <div className="main-categories">
+                  <div className="cat-1">
+                    <CategoryOne recipeCat={recipeCat} />
+                  </div>
+                </div>
+              </>} />
+          <Route path="/recipe/category" element={<>
+                <Search searchValue={searchValue} setSearchValue={setSearchValue} />
+                <SearchResponse searchValue={searchValue} />
+                <div className="main-categories">
+                  <div className="cat-1">
+                    <CategoryOne recipeCat={recipeCat} />
+                  </div>
+                </div>
+              </>} />
           <Route path="/recipe/category/:recipeCategory" element={<RecipeList />} />
         </Routes>
       </div>

@@ -27,7 +27,7 @@ function SearchResponse({ searchValue }) {
       try {
         const response = await axios.get(`https://api.spoonacular.com/recipes/complexSearch`, {
           params: {
-            apiKey: api3,
+            apiKey: api1,
             query: searchValue,
           },
         });

@@ -14,7 +14,7 @@ function ProductDetails() {
   const { id } = useParams();
 
   function handleClick() {
-    navigate("/");
+    navigate(-1);
   }
 
   const api1 = "11479ad6a5704e14bb46eb8c51098184";
@@ -30,7 +30,7 @@ function ProductDetails() {
           `https://api.spoonacular.com/recipes/${id}/information?includeNutrition=true`,
           {
             params: {
-              apiKey: api3,
+              apiKey: api1,
               query: id,
             },
           }
@@ -79,16 +79,16 @@ function ProductDetails() {
           </p>
           <div className="tags-div">
             {recipeDetail &&
-              recipeDetail.dishTypes.map((item) => {
-                return <span className="tags">{item}</span>;
+              recipeDetail.dishTypes.map((item,index) => {
+                return <span className="tags" key={index}>{item}</span>;
               })}
           </div>
           <h4 className="detail-title">Ingredients :</h4>
           <div className="ingredients-div row">
             {recipeDetail &&
-              recipeDetail.extendedIngredients.map((item) => {
+              recipeDetail.extendedIngredients.map((item,index) => {
                 return (
-                  <div className="ingredients">
+                  <div className="ingredients" key={index}>
                     <img
                       src={`https://spoonacular.com/cdn/ingredients_100x100/${item.image}`}
                       alt=""

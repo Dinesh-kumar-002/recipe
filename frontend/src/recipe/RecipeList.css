@@ -34,10 +34,11 @@
   }
   
   .card__title {
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 700;
-    margin-bottom: 3px;
-  }
+    margin-bottom: 5px;
+    max-width: 88%;
+}
   
   .card__text {
     font-size: 1rem;
@@ -99,8 +100,10 @@
   flex-direction: column;
   margin: 15px 0;
 }
-.ingredients img{
+.ingredients img {
   width: 50px;
+  height: 50px;
+  object-fit: contain;
 }
 .ingredients-div {
   display: flex;
