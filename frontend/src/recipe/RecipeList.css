@@ -91,3 +91,39 @@
     color: black;
     font-weight: 600;
 }
+.ingredients {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 15px 0;
+}
+.ingredients img{
+  width: 50px;
+}
+.ingredients-div {
+  display: flex;
+  flex-wrap: wrap;
+}
+.ingredients p{
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.measures span {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+table{
+  width: 100%;
+  border: 1px solid black;
+}
+tr{
+  border: 1px solid black;
+}
+td{
+  padding: 5px;
+  border: 1px solid black;
+}

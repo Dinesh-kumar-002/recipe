@@ -5,7 +5,11 @@ import './SearchResponse.css';
 
 function SearchResponse({ searchValue }) {
   const navigate = useNavigate();
-  const apiKey = '11479ad6a5704e14bb46eb8c51098184'; 
+  const api1='11479ad6a5704e14bb46eb8c51098184';
+  const api2='d5caadaed67943d8b0286c5823db5e7e';
+  const api3 = "69a9c392dce54fae88e629cae29f2639";
+
+
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -17,15 +21,13 @@ function SearchResponse({ searchValue }) {
   useEffect(() => {
     const fetchRecipes = async () => {
       if (!searchValue) return; 
-      
-
       setLoading(true);
       setError('');
 
       try {
         const response = await axios.get(`https://api.spoonacular.com/recipes/complexSearch`, {
           params: {
-            apiKey: apiKey,
+            apiKey: api3,
             query: searchValue,
           },
         });
@@ -52,7 +54,7 @@ function SearchResponse({ searchValue }) {
         
       </div>
       {recipes.map((recipe, index) => (
-        <div className="items" key={recipe.id} onClick={() => handleProductClick(recipe.id)}>
+        <div className="items" key={index} onClick={() => handleProductClick(recipe.id)}>
           <img src={recipe.image} alt={recipe.title} />
           <div className="item-title">
             <p className="text">{recipe.title}</p>

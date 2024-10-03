@@ -1,12 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import './RecipeList.css';
 import axios from 'axios';
+import { IoArrowBack } from "react-icons/io5";
+import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
 function RecipeList() {
+  const navigate = useNavigate();
   const { recipeCategory } = useParams(); 
   const [category, setCategory] = useState([]);
-
+  function handleClick(){
+    navigate('/');
+}
+  const api1='11479ad6a5704e14bb46eb8c51098184';
+    const api2='d5caadaed67943d8b0286c5823db5e7e';
+    const api3 = "69a9c392dce54fae88e629cae29f2639";
   useEffect(() => {
     const fetchRecipes = async () => {
       if (!recipeCategory) return; 
@@ -14,7 +22,7 @@ function RecipeList() {
       try {
         const response = await axios.get(`https://api.spoonacular.com/recipes/complexSearch`, {
           params: {
-            apiKey: '11479ad6a5704e14bb46eb8c51098184',
+            apiKey: api3,
             query: recipeCategory,
           },
         });
@@ -30,6 +38,9 @@ function RecipeList() {
 
   return (
     <>
+      <div className="back" onClick={handleClick}>
+                    <IoArrowBack />
+        </div>
       {category && category.length > 0 ? category.map((cat, index) => (
         <div className="recipelist" key={index}>
           <div className="card">
@@ -44,9 +55,9 @@ function RecipeList() {
             </div>
           </div>
         </div>
-      )) : <p>No recipes found for {recipeCategory}.</p>}
+      )) : <p className='text-center position-absolute top-50 start-50 ' style={{transform:"translate(-50%,-50%)"}}>No recipes found for {recipeCategory}.</p>}
 
-      <div className="loadmore">
+      <div className="loadmore" style={{display : (category.length) > 0 ? 'flex': 'none'}}>
         <button>Load more</button>
       </div>
     </>
